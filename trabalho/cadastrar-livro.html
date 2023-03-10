@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Informações sobre o livro</title>
+    
+    <style>
+
+        body {
+            background-image: url(background-bookshelf.jpg);
+        }
+        
+        h3 {
+            margin-top: 20px;
+            text-align: center;
+            color: rgb(3, 142, 255);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            opacity: 90%;
+            border-radius: 5px;
+        }
+        
+        label {
+            color:rgb(53, 11, 207);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        
+        input[type="text"], input[type="number"], input[type="file"] {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        
+        input[type="reset"], input[type="submit"] {
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        
+        p {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div>
+        <h3>INFORMAÇÕES SOBRE O LIVRO </h3>
+        <form method="POST" action="insere_livro.php" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="pwd">Nome do livro:</label>
+                <input type="text" class="form-control" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="sel1">Nome do autor (ou autores): </label>
+                <input type="text" class="form-control" name="autor" required>
+               
+            </div>
+            <div class="form-group">
+                <label for="pwd">Preço (em Reais R$):</label>
+                <input type="number" class="form-control" name="preco" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Imagem do livro:</label>
+                <input type="file" class="form-control" name="imagem" required>
+            </div>
+            <input class='btn btn-secondary' type="reset" value="Limpar">
+            <input class='btn btn-primary' type="submit" name="submit" value="Enviar">
+        </form>
+        <p>Deseja fazer logout? Clique aqui! <a href="logout.php">LOGOUT</a> </p>
+    </div>
+   
+</body>
+
+</html>
